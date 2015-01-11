@@ -7,6 +7,7 @@ var $body = $('body'),
   $modalCheckbox = $('#fullscreenCheck'),
   i = 0;
 
+console.log($modalCheckbox);
 
 $modal.modal('show'); 
 $body.addClass('view-all');
@@ -15,7 +16,7 @@ $setupSelect.click(function() {
   $modal.modal('hide');
   $body.removeClass('view-all');
 
-  if(!$modalCheckbox.checked) {
+  if(!$modalCheckbox.is(":checked")) {
     $fullScreenLayer.addClass('hidden');
   }
 });
