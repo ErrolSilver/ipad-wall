@@ -1,0 +1,95 @@
+html, body {
+  height: 200%;
+  width: 223.5%; // the most magical of all the numbers
+}
+html {
+  font-size: 1em;
+  // Default (Extra small screens). 1rem = 7px
+  font-size: percentage(7 / 16);
+  @media (min-width: 768px) {
+    // Small screens. 1rem = 8px
+    font-size: percentage(8 / 16);
+  }
+  @media (min-width: 992px) {
+    // Medium screens. 1rem = 9px
+    font-size: percentage(9 / 16);
+  }
+  @media (min-width: 1200px) {
+    // Large screens. 1rem = 10px
+    font-size: percentage(10 / 16);
+  }
+}
+body {
+  font-size: 1.8em;
+  overflow: hidden;
+}
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.4rem;
+}
+h5 {
+  font-size: 2rem;
+}
+h6 {
+  font-size: 1.8rem;
+}
+
+
+.view-all {
+  height: 50%;
+  width: 45%;
+}
+
+section[class^='view-'] {
+  border: 1px solid black;
+  display: inline-block;
+  float: left;
+  height: 25%;
+  width: 20%;
+}
+
+.full-screen {
+  background: url('../img/drupal.png') top left no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+
+// Modal tweaks
+.modal-backdrop.in {
+  z-index: 2
+}
+
+.ipad-select {
+  height: 500px;
+  width: 100%;
+  .ipad-select--device {
+    float: left;
+    height: 25%;
+    width: 20%;
+    .ipad-select--device-chose {
+      background: green;
+      border: 1px solid black;
+      display: block;
+      height: 100%;
+      width: 100%;
+      &:hover {
+        background: black;
+      }
+    }
+  }
+}
