@@ -95,7 +95,7 @@ section[class^='view-'] {
 
 /* line 74, ../sass/theme.scss */
 .modal-backdrop.in {
-  z-index: 2;
+  z-index: 0;
 }
 
 /* line 78, ../sass/theme.scss */

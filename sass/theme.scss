@@ -72,7 +72,7 @@ section[class^='view-'] {
 
 // Modal tweaks
 .modal-backdrop.in {
-  z-index: 2
+  z-index: 0;
 }
 
 .ipad-select {
