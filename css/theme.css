@@ -66,7 +66,7 @@ h6 {
 
 /* line 46, ../sass/theme.scss */
 .view-all {
-  height: 50%;
+  height: 43%;
   width: 45%;
 }
 
@@ -76,10 +76,11 @@ section[class^='view-'] {
   display: inline-block;
   float: left;
   height: 25%;
+  overflow: hidden;
   width: 20%;
 }
 
-/* line 59, ../sass/theme.scss */
+/* line 60, ../sass/theme.scss */
 .full-screen {
   background: url("../img/drupal.png") top left no-repeat;
   background-size: cover;
@@ -89,26 +90,26 @@ section[class^='view-'] {
   position: relative;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 1;
 }
 
-/* line 73, ../sass/theme.scss */
+/* line 74, ../sass/theme.scss */
 .modal-backdrop.in {
   z-index: 2;
 }
 
-/* line 77, ../sass/theme.scss */
+/* line 78, ../sass/theme.scss */
 .ipad-select {
   height: 500px;
   width: 100%;
 }
-/* line 80, ../sass/theme.scss */
+/* line 81, ../sass/theme.scss */
 .ipad-select .ipad-select--device {
   float: left;
   height: 25%;
   width: 20%;
 }
-/* line 84, ../sass/theme.scss */
+/* line 85, ../sass/theme.scss */
 .ipad-select .ipad-select--device .ipad-select--device-chose {
   background: green;
   border: 1px solid black;
@@ -116,7 +117,7 @@ section[class^='view-'] {
   height: 100%;
   width: 100%;
 }
-/* line 90, ../sass/theme.scss */
+/* line 91, ../sass/theme.scss */
 .ipad-select .ipad-select--device .ipad-select--device-chose:hover {
   background: black;
 }

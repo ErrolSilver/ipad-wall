@@ -10,6 +10,7 @@ var $body = $('body'),
 console.log($modalCheckbox);
 
 $modal.modal('show'); 
+$modal.draggable();
 $body.addClass('view-all');
 
 $setupSelect.click(function() {
