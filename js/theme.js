@@ -3,7 +3,7 @@ var $body = $('body'),
   $modalClose = $('#config').find('.close'),
   $modalConfirm = $('#config').find('.confirm'),
   $fullScreenLayer = $('#fullScreen'),
-  $setupSelect = $('#config').find('.ipad-select--device-chose'),
+  $setupSelect = $('#config').find('.ipad-select--device-chosen'),
   $modalCheckbox = $('#fullscreenCheck'),
   i = 0;
 
@@ -27,3 +27,6 @@ $modalClose.click(function() {
   $fullScreenLayer.addClass('hidden');
 });
 
+$('.view--content-container').on('mousedown', function() {
+  $(this).toggleClass('flip');
+});

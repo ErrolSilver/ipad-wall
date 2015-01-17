@@ -54,7 +54,43 @@ section[class^='view-'] {
   float: left;
   height: 25%;
   overflow: hidden;
+  padding: 1%;
+  perspective: 5000px;
+  position: relative;
   width: 20%;
+
+  .view--content-container {
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .75s ease-in-out;
+    width: 100%;
+  }
+  .view--content__front {
+    backface-visibility: hidden;
+    background: #c3c3c3;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .view--content__back {
+    backface-visibility: hidden;
+    background-color: #aaa;
+    color: white;
+    display: block;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    transform: rotateY(180deg);
+    width: 100%;
+
+  }
+}
+
+.flip {
+  transform: rotateY(180deg);
 }
 
 .full-screen {
@@ -67,6 +103,12 @@ section[class^='view-'] {
   top: 0;
   width: 100%;
   z-index: 1;
+
+  img,
+  video {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 
@@ -82,7 +124,7 @@ section[class^='view-'] {
     float: left;
     height: 25%;
     width: 20%;
-    .ipad-select--device-chose {
+    .ipad-select--device-chosen {
       background: green;
       border: 1px solid black;
       display: block;

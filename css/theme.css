@@ -77,10 +77,55 @@ section[class^='view-'] {
   float: left;
   height: 25%;
   overflow: hidden;
+  padding: 1%;
+  -webkit-perspective: 5000px;
+          perspective: 5000px;
+  position: relative;
   width: 20%;
 }
+/* line 62, ../sass/theme.scss */
+section[class^='view-'] .view--content-container {
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all .75s ease-in-out;
+          transition: all .75s ease-in-out;
+  width: 100%;
+}
+/* line 68, ../sass/theme.scss */
+section[class^='view-'] .view--content__front {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: #c3c3c3;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+/* line 77, ../sass/theme.scss */
+section[class^='view-'] .view--content__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #aaa;
+  color: white;
+  display: block;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  width: 100%;
+}
 
-/* line 60, ../sass/theme.scss */
+/* line 92, ../sass/theme.scss */
+.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* line 96, ../sass/theme.scss */
 .full-screen {
   background: url("../img/drupal.png") top left no-repeat;
   background-size: cover;
@@ -92,32 +137,38 @@ section[class^='view-'] {
   width: 100%;
   z-index: 1;
 }
+/* line 108, ../sass/theme.scss */
+.full-screen img,
+.full-screen video {
+  height: 100%;
+  width: 100%;
+}
 
-/* line 74, ../sass/theme.scss */
+/* line 116, ../sass/theme.scss */
 .modal-backdrop.in {
   z-index: 0;
 }
 
-/* line 78, ../sass/theme.scss */
+/* line 120, ../sass/theme.scss */
 .ipad-select {
   height: 500px;
   width: 100%;
 }
-/* line 81, ../sass/theme.scss */
+/* line 123, ../sass/theme.scss */
 .ipad-select .ipad-select--device {
   float: left;
   height: 25%;
   width: 20%;
 }
-/* line 85, ../sass/theme.scss */
-.ipad-select .ipad-select--device .ipad-select--device-chose {
+/* line 127, ../sass/theme.scss */
+.ipad-select .ipad-select--device .ipad-select--device-chosen {
   background: green;
   border: 1px solid black;
   display: block;
   height: 100%;
   width: 100%;
 }
-/* line 91, ../sass/theme.scss */
-.ipad-select .ipad-select--device .ipad-select--device-chose:hover {
+/* line 133, ../sass/theme.scss */
+.ipad-select .ipad-select--device .ipad-select--device-chosen:hover {
   background: black;
 }
