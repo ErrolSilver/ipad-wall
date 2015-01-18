@@ -1,7 +1,9 @@
 html, 
 body {
   height: 100%;
-  width: 100%; 
+  overflow: hidden;
+  -webkit-overflow-scrolling: none;
+  width: 100%;  
 }
 
 html {
@@ -25,7 +27,6 @@ html {
 
 body {
   font-size: 1.8em;
-  overflow: hidden;
 }
 
 h1 {

@@ -2,65 +2,66 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: none;
   width: 100%;
 }
 
-/* line 7, ../sass/_base.scss */
+/* line 10, ../sass/_base.scss */
 html {
   font-size: 1em;
   font-size: 43.75%;
 }
 @media (min-width: 768px) {
-  /* line 7, ../sass/_base.scss */
+  /* line 10, ../sass/_base.scss */
   html {
     font-size: 50%;
   }
 }
 @media (min-width: 992px) {
-  /* line 7, ../sass/_base.scss */
+  /* line 10, ../sass/_base.scss */
   html {
     font-size: 56.25%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 7, ../sass/_base.scss */
+  /* line 10, ../sass/_base.scss */
   html {
     font-size: 62.5%;
   }
 }
 
-/* line 26, ../sass/_base.scss */
+/* line 29, ../sass/_base.scss */
 body {
   font-size: 1.8em;
-  overflow: hidden;
 }
 
-/* line 31, ../sass/_base.scss */
+/* line 33, ../sass/_base.scss */
 h1 {
   font-size: 3.6rem;
 }
 
-/* line 35, ../sass/_base.scss */
+/* line 37, ../sass/_base.scss */
 h2 {
   font-size: 3.2rem;
 }
 
-/* line 39, ../sass/_base.scss */
+/* line 41, ../sass/_base.scss */
 h3 {
   font-size: 3rem;
 }
 
-/* line 43, ../sass/_base.scss */
+/* line 45, ../sass/_base.scss */
 h4 {
   font-size: 2.4rem;
 }
 
-/* line 47, ../sass/_base.scss */
+/* line 49, ../sass/_base.scss */
 h5 {
   font-size: 2rem;
 }
 
-/* line 51, ../sass/_base.scss */
+/* line 53, ../sass/_base.scss */
 h6 {
   font-size: 1.8rem;
 }
