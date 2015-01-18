@@ -30,3 +30,4 @@ $viewContent.on('mousedown', function() {
 });
 
 document.documentElement.requestFullscreen();
+window.scrollTo(0,1);
