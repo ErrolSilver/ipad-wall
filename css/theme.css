@@ -1,89 +1,95 @@
-/* line 1, ../sass/theme.scss */
-html, body {
-  height: 200%;
-  width: 223.5%;
+/* line 2, ../sass/_base.scss */
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
-/* line 5, ../sass/theme.scss */
+/* line 7, ../sass/_base.scss */
 html {
   font-size: 1em;
   font-size: 43.75%;
 }
 @media (min-width: 768px) {
-  /* line 5, ../sass/theme.scss */
+  /* line 7, ../sass/_base.scss */
   html {
     font-size: 50%;
   }
 }
 @media (min-width: 992px) {
-  /* line 5, ../sass/theme.scss */
+  /* line 7, ../sass/_base.scss */
   html {
     font-size: 56.25%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 5, ../sass/theme.scss */
+  /* line 7, ../sass/_base.scss */
   html {
     font-size: 62.5%;
   }
 }
 
-/* line 22, ../sass/theme.scss */
+/* line 26, ../sass/_base.scss */
 body {
   font-size: 1.8em;
   overflow: hidden;
 }
 
-/* line 26, ../sass/theme.scss */
+/* line 31, ../sass/_base.scss */
 h1 {
   font-size: 3.6rem;
 }
 
-/* line 29, ../sass/theme.scss */
+/* line 35, ../sass/_base.scss */
 h2 {
   font-size: 3.2rem;
 }
 
-/* line 32, ../sass/theme.scss */
+/* line 39, ../sass/_base.scss */
 h3 {
   font-size: 3rem;
 }
 
-/* line 35, ../sass/theme.scss */
+/* line 43, ../sass/_base.scss */
 h4 {
   font-size: 2.4rem;
 }
 
-/* line 38, ../sass/theme.scss */
+/* line 47, ../sass/_base.scss */
 h5 {
   font-size: 2rem;
 }
 
-/* line 41, ../sass/theme.scss */
+/* line 51, ../sass/_base.scss */
 h6 {
   font-size: 1.8rem;
 }
 
-/* line 46, ../sass/theme.scss */
-.view-all {
-  height: 50%;
-  width: 45%;
+/* line 11, ../sass/theme.scss */
+.master-wrapper {
+  height: 400%;
+  width: 500%;
 }
 
-/* line 51, ../sass/theme.scss */
+/* line 17, ../sass/theme.scss */
+.view-all .master-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 23, ../sass/theme.scss */
 section[class^='view-'] {
   border: 1px solid black;
   display: inline-block;
   float: left;
   height: 25%;
   overflow: hidden;
-  padding: 1%;
   -webkit-perspective: 5000px;
           perspective: 5000px;
   position: relative;
   width: 20%;
 }
-/* line 62, ../sass/theme.scss */
+/* line 33, ../sass/theme.scss */
 section[class^='view-'] .view--content-container {
   height: 100%;
   -webkit-transform-style: preserve-3d;
@@ -91,19 +97,22 @@ section[class^='view-'] .view--content-container {
   -webkit-transition: all .75s ease-in-out;
           transition: all .75s ease-in-out;
   width: 100%;
+  will-change: transform;
 }
-/* line 68, ../sass/theme.scss */
+/* line 40, ../sass/theme.scss */
 section[class^='view-'] .view--content__front {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background: #c3c3c3;
   height: 100%;
-  padding: 10px;
   position: absolute;
   text-align: center;
   width: 100%;
 }
-/* line 77, ../sass/theme.scss */
+/* line 47, ../sass/theme.scss */
+section[class^='view-'] .view--content__front img {
+  height: 100%;
+}
+/* line 51, ../sass/theme.scss */
 section[class^='view-'] .view--content__back {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -119,13 +128,13 @@ section[class^='view-'] .view--content__back {
   width: 100%;
 }
 
-/* line 92, ../sass/theme.scss */
+/* line 66, ../sass/theme.scss */
 .flip {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-/* line 96, ../sass/theme.scss */
+/* line 70, ../sass/theme.scss */
 .full-screen {
   background: url("../img/drupal.png") top left no-repeat;
   background-size: cover;
@@ -137,30 +146,30 @@ section[class^='view-'] .view--content__back {
   width: 100%;
   z-index: 1;
 }
-/* line 108, ../sass/theme.scss */
+/* line 82, ../sass/theme.scss */
 .full-screen img,
 .full-screen video {
   height: 100%;
   width: 100%;
 }
 
-/* line 116, ../sass/theme.scss */
+/* line 90, ../sass/theme.scss */
 .modal-backdrop.in {
   z-index: 0;
 }
 
-/* line 120, ../sass/theme.scss */
+/* line 94, ../sass/theme.scss */
 .ipad-select {
   height: 500px;
   width: 100%;
 }
-/* line 123, ../sass/theme.scss */
+/* line 97, ../sass/theme.scss */
 .ipad-select .ipad-select--device {
   float: left;
   height: 25%;
   width: 20%;
 }
-/* line 127, ../sass/theme.scss */
+/* line 101, ../sass/theme.scss */
 .ipad-select .ipad-select--device .ipad-select--device-chosen {
   background: green;
   border: 1px solid black;
@@ -168,7 +177,7 @@ section[class^='view-'] .view--content__back {
   height: 100%;
   width: 100%;
 }
-/* line 133, ../sass/theme.scss */
+/* line 107, ../sass/theme.scss */
 .ipad-select .ipad-select--device .ipad-select--device-chosen:hover {
   background: black;
 }

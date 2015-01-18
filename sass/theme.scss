@@ -1,51 +1,23 @@
-html, body {
-  height: 200%;
-  width: 223.5%; // the most magical of all the numbers
-}
-html {
-  font-size: 1em;
-  // Default (Extra small screens). 1rem = 7px
-  font-size: percentage(7 / 16);
-  @media (min-width: 768px) {
-    // Small screens. 1rem = 8px
-    font-size: percentage(8 / 16);
-  }
-  @media (min-width: 992px) {
-    // Medium screens. 1rem = 9px
-    font-size: percentage(9 / 16);
-  }
-  @media (min-width: 1200px) {
-    // Large screens. 1rem = 10px
-    font-size: percentage(10 / 16);
-  }
-}
-body {
-  font-size: 1.8em;
-  overflow: hidden;
-}
-h1 {
-  font-size: 3.6rem;
-}
-h2 {
-  font-size: 3.2rem;
-}
-h3 {
-  font-size: 3rem;
-}
-h4 {
-  font-size: 2.4rem;
-}
-h5 {
-  font-size: 2rem;
-}
-h6 {
-  font-size: 1.8rem;
-}
+// Set these numbers to the numbers of devices you are supporting
+$devices-horizontal: 5;
+$devices-vertical: 4;
 
+$display-height: $devices-vertical * 100%;
+$display-width: $devices-horizontal * 100%;
+
+// general boring rules
+@import 'base';
+
+.master-wrapper {
+  height: $display-height;
+  width: $display-width; 
+}
 
 .view-all {
-  height: 50%;
-  width: 45%;
+  .master-wrapper {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 section[class^='view-'] {
@@ -54,7 +26,6 @@ section[class^='view-'] {
   float: left;
   height: 25%;
   overflow: hidden;
-  padding: 1%;
   perspective: 5000px;
   position: relative;
   width: 20%;
@@ -64,15 +35,18 @@ section[class^='view-'] {
     transform-style: preserve-3d;
     transition: all .75s ease-in-out;
     width: 100%;
+    will-change: transform;
   }
   .view--content__front {
     backface-visibility: hidden;
-    background: #c3c3c3;
     height: 100%;
-    padding: 10px;
     position: absolute;
     text-align: center;
     width: 100%;
+
+    img {
+      height: 100%;
+    }
   }
   .view--content__back {
     backface-visibility: hidden;
