@@ -78,12 +78,6 @@ h6 {
   width: 100%;
 }
 
-/* line 30, ../sass/theme.scss */
-.animated .master-wrapper {
-  -webkit-transition: all .5s linear;
-          transition: all .5s linear;
-}
-
 /* line 35, ../sass/theme.scss */
 section[class^='view-'] {
   border: 1px solid #000;
@@ -111,15 +105,16 @@ section[class^='view-'] .view--content__front {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   height: 100%;
+  overflow: hidden;
   position: absolute;
   text-align: center;
   width: 100%;
 }
-/* line 60, ../sass/theme.scss */
+/* line 61, ../sass/theme.scss */
 section[class^='view-'] .view--content__front img {
   height: 100%;
 }
-/* line 65, ../sass/theme.scss */
+/* line 66, ../sass/theme.scss */
 section[class^='view-'] .view--content__back {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -135,13 +130,13 @@ section[class^='view-'] .view--content__back {
   width: 100%;
 }
 
-/* line 80, ../sass/theme.scss */
+/* line 81, ../sass/theme.scss */
 .flip {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-/* line 84, ../sass/theme.scss */
+/* line 85, ../sass/theme.scss */
 .full-screen {
   background: url("../img/bi.jpg") top left no-repeat;
   background-size: cover;
@@ -153,39 +148,39 @@ section[class^='view-'] .view--content__back {
   width: 100%;
   z-index: 1;
 }
-/* line 96, ../sass/theme.scss */
+/* line 97, ../sass/theme.scss */
 .full-screen img,
 .full-screen video {
   width: 100%;
 }
 
-/* line 103, ../sass/theme.scss */
+/* line 104, ../sass/theme.scss */
 .modal-backdrop.in {
   z-index: -1;
 }
 
-/* line 107, ../sass/theme.scss */
+/* line 108, ../sass/theme.scss */
 .modal-content {
   opacity: .9;
 }
 
-/* line 111, ../sass/theme.scss */
+/* line 112, ../sass/theme.scss */
 .modal-footer {
   font-size: 1.5em;
 }
 
-/* line 115, ../sass/theme.scss */
+/* line 116, ../sass/theme.scss */
 .ipad-select {
   height: 500px;
   width: 100%;
 }
-/* line 119, ../sass/theme.scss */
+/* line 120, ../sass/theme.scss */
 .ipad-select .ipad-select--device {
   float: left;
   height: 25%;
   width: 20%;
 }
-/* line 124, ../sass/theme.scss */
+/* line 125, ../sass/theme.scss */
 .ipad-select .ipad-select--device .ipad-select--device-chosen {
   background: #fff;
   border: 1px solid #000;
@@ -197,7 +192,7 @@ section[class^='view-'] .view--content__back {
   text-align: center;
   width: 100%;
 }
-/* line 135, ../sass/theme.scss */
+/* line 136, ../sass/theme.scss */
 .ipad-select .ipad-select--device .ipad-select--device-chosen:hover {
   background: #f3f3f3;
   text-decoration: none;

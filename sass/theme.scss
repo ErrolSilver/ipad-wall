@@ -28,7 +28,7 @@ $view-width: 100% / $devices-horizontal;
 
 .animated {
   .master-wrapper {
-    transition: all .5s linear;
+    //transition: all .5s linear;
   }
 }
 
@@ -53,6 +53,7 @@ section[class^='view-'] {
   .view--content__front {
     backface-visibility: hidden;
     height: 100%;
+    overflow: hidden;
     position: absolute;
     text-align: center;
     width: 100%;
