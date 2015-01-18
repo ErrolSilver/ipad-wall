@@ -6,7 +6,6 @@ var $body = $('body'),
   $setupSelect = $('#config').find('.ipad-select--device-chosen'),
   $modalCheckbox = $('#fullscreenCheck'),
   $viewContent = $('.view--content-container');
-console.log($modalCheckbox);
 
 $modal.modal('show'); 
 $modal.draggable();
@@ -29,3 +28,5 @@ $modalClose.click(function() {
 $viewContent.on('mousedown', function() {
   $(this).toggleClass('flip');
 });
+
+$body.requestFullscreen();
