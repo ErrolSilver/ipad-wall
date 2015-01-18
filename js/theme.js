@@ -29,5 +29,3 @@ $viewContent.on('mousedown', function() {
   $(this).toggleClass('flip');
 });
 
-document.documentElement.requestFullscreen();
-window.scrollTo(0,1);
