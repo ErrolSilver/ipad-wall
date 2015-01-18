@@ -2,8 +2,13 @@
 $devices-horizontal: 5;
 $devices-vertical: 4;
 
+// Get total width of devices
 $display-height: $devices-vertical * 100%;
 $display-width: $devices-horizontal * 100%;
+
+// Get the width for each device view 
+$view-height: 100% / $devices-vertical;
+$view-width: 100% / $devices-horizontal;
 
 // general boring rules
 @import 'base';
@@ -11,6 +16,7 @@ $display-width: $devices-horizontal * 100%;
 .master-wrapper {
   height: $display-height;
   width: $display-width; 
+  will-change: transform;
 }
 
 .view-all {
@@ -20,15 +26,21 @@ $display-width: $devices-horizontal * 100%;
   }
 }
 
+.animated {
+  .master-wrapper {
+    transition: all .5s linear;
+  }
+}
+
 section[class^='view-'] {
-  border: 1px solid black;
+  border: 1px solid #000;
   display: inline-block;
   float: left;
-  height: 25%;
+  height: $view-height;
   overflow: hidden;
   perspective: 5000px;
   position: relative;
-  width: 20%;
+  width: $view-width;
 
   .view--content-container {
     height: 100%;
@@ -37,6 +49,7 @@ section[class^='view-'] {
     width: 100%;
     will-change: transform;
   }
+
   .view--content__front {
     backface-visibility: hidden;
     height: 100%;
@@ -48,10 +61,11 @@ section[class^='view-'] {
       height: 100%;
     }
   }
+
   .view--content__back {
     backface-visibility: hidden;
     background-color: #aaa;
-    color: white;
+    color: #fff;
     display: block;
     height: 100%;
     padding: 10px;
@@ -68,7 +82,7 @@ section[class^='view-'] {
 }
 
 .full-screen {
-  background: url('../img/drupal.png') top left no-repeat;
+  background: url('../img/bi.jpg') top left no-repeat;
   background-size: cover;
   height: 100%;
   left: 0;
@@ -80,7 +94,6 @@ section[class^='view-'] {
 
   img,
   video {
-    height: 100%;
     width: 100%;
   }
 }
@@ -88,24 +101,40 @@ section[class^='view-'] {
 
 // Modal tweaks
 .modal-backdrop.in {
-  z-index: 0;
+  z-index: -1;
+}
+
+.modal-content {
+  opacity: .9;
+}
+
+.modal-footer {
+  font-size: 1.5em;
 }
 
 .ipad-select {
   height: 500px;
   width: 100%;
+
   .ipad-select--device {
     float: left;
-    height: 25%;
-    width: 20%;
+    height: $view-height;
+    width: $view-width;
+
     .ipad-select--device-chosen {
-      background: green;
-      border: 1px solid black;
+      background: #fff;
+      border: 1px solid #000;
+      color: #000;
       display: block;
+      font-size: 2em;
       height: 100%;
+      padding-top: 33%;
+      text-align: center;
       width: 100%;
+
       &:hover {
-        background: black;
+        background: #f3f3f3;
+        text-decoration: none;
       }
     }
   }

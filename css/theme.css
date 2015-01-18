@@ -65,21 +65,28 @@ h6 {
   font-size: 1.8rem;
 }
 
-/* line 11, ../sass/theme.scss */
+/* line 16, ../sass/theme.scss */
 .master-wrapper {
   height: 400%;
   width: 500%;
+  will-change: transform;
 }
 
-/* line 17, ../sass/theme.scss */
+/* line 23, ../sass/theme.scss */
 .view-all .master-wrapper {
   height: 100%;
   width: 100%;
 }
 
-/* line 23, ../sass/theme.scss */
+/* line 30, ../sass/theme.scss */
+.animated .master-wrapper {
+  -webkit-transition: all .5s linear;
+          transition: all .5s linear;
+}
+
+/* line 35, ../sass/theme.scss */
 section[class^='view-'] {
-  border: 1px solid black;
+  border: 1px solid #000;
   display: inline-block;
   float: left;
   height: 25%;
@@ -89,7 +96,7 @@ section[class^='view-'] {
   position: relative;
   width: 20%;
 }
-/* line 33, ../sass/theme.scss */
+/* line 45, ../sass/theme.scss */
 section[class^='view-'] .view--content-container {
   height: 100%;
   -webkit-transform-style: preserve-3d;
@@ -99,7 +106,7 @@ section[class^='view-'] .view--content-container {
   width: 100%;
   will-change: transform;
 }
-/* line 40, ../sass/theme.scss */
+/* line 53, ../sass/theme.scss */
 section[class^='view-'] .view--content__front {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -108,16 +115,16 @@ section[class^='view-'] .view--content__front {
   text-align: center;
   width: 100%;
 }
-/* line 47, ../sass/theme.scss */
+/* line 60, ../sass/theme.scss */
 section[class^='view-'] .view--content__front img {
   height: 100%;
 }
-/* line 51, ../sass/theme.scss */
+/* line 65, ../sass/theme.scss */
 section[class^='view-'] .view--content__back {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   background-color: #aaa;
-  color: white;
+  color: #fff;
   display: block;
   height: 100%;
   padding: 10px;
@@ -128,15 +135,15 @@ section[class^='view-'] .view--content__back {
   width: 100%;
 }
 
-/* line 66, ../sass/theme.scss */
+/* line 80, ../sass/theme.scss */
 .flip {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-/* line 70, ../sass/theme.scss */
+/* line 84, ../sass/theme.scss */
 .full-screen {
-  background: url("../img/drupal.png") top left no-repeat;
+  background: url("../img/bi.jpg") top left no-repeat;
   background-size: cover;
   height: 100%;
   left: 0;
@@ -146,38 +153,52 @@ section[class^='view-'] .view--content__back {
   width: 100%;
   z-index: 1;
 }
-/* line 82, ../sass/theme.scss */
+/* line 96, ../sass/theme.scss */
 .full-screen img,
 .full-screen video {
-  height: 100%;
   width: 100%;
 }
 
-/* line 90, ../sass/theme.scss */
+/* line 103, ../sass/theme.scss */
 .modal-backdrop.in {
-  z-index: 0;
+  z-index: -1;
 }
 
-/* line 94, ../sass/theme.scss */
+/* line 107, ../sass/theme.scss */
+.modal-content {
+  opacity: .9;
+}
+
+/* line 111, ../sass/theme.scss */
+.modal-footer {
+  font-size: 1.5em;
+}
+
+/* line 115, ../sass/theme.scss */
 .ipad-select {
   height: 500px;
   width: 100%;
 }
-/* line 97, ../sass/theme.scss */
+/* line 119, ../sass/theme.scss */
 .ipad-select .ipad-select--device {
   float: left;
   height: 25%;
   width: 20%;
 }
-/* line 101, ../sass/theme.scss */
+/* line 124, ../sass/theme.scss */
 .ipad-select .ipad-select--device .ipad-select--device-chosen {
-  background: green;
-  border: 1px solid black;
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
   display: block;
+  font-size: 2em;
   height: 100%;
+  padding-top: 33%;
+  text-align: center;
   width: 100%;
 }
-/* line 107, ../sass/theme.scss */
+/* line 135, ../sass/theme.scss */
 .ipad-select .ipad-select--device .ipad-select--device-chosen:hover {
-  background: black;
+  background: #f3f3f3;
+  text-decoration: none;
 }
