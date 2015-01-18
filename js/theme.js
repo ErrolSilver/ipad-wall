@@ -29,4 +29,4 @@ $viewContent.on('mousedown', function() {
   $(this).toggleClass('flip');
 });
 
-$body.requestFullscreen();
+document.documentElement.requestFullscreen();
