@@ -1,4 +1,4 @@
-/* line 2, ../sass/_base.scss */
+/* line 1, ../sass/_base.scss */
 html,
 body {
   height: 100%;
@@ -138,7 +138,7 @@ section[class^='view-'] .view--content__back {
 
 /* line 85, ../sass/theme.scss */
 .full-screen {
-  background: url("../img/bi.jpg") top left no-repeat;
+  background: url("../img/BI.jpg") top left no-repeat;
   background-size: cover;
   height: 100%;
   left: 0;
@@ -148,7 +148,7 @@ section[class^='view-'] .view--content__back {
   width: 100%;
   z-index: 1;
 }
-/* line 97, ../sass/theme.scss */
+/* line 96, ../sass/theme.scss */
 .full-screen img,
 .full-screen video {
   width: 100%;
