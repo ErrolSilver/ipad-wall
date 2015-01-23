@@ -1,0 +1,103 @@
+/**
+ * @file Overrides some bootstrap elements and fixes various problems with the
+ * contrib "Bootstrap" theme.
+ */
+a.tabledrag-handle .handle {
+  height: 22px; }
+
+/**
+ * Applies bootsraps default menu style to menu items that aren't links. (See
+ * the "Special Menu Items" module.)
+ */
+.nav > li span {
+  cursor: default;
+  display: block;
+  padding: 10px 15px;
+  position: relative; }
+
+.navbar-default .navbar-nav > li > span {
+  color: #777777; }
+
+.navbar-nav > li > span {
+  line-height: 20px; }
+@media (min-width: 768px) {
+  .navbar-nav > li > span {
+    padding-top: 15px;
+    padding-bottom: 15px; } }
+
+.view .progress-disabled {
+  float: left; }
+
+.tb-megamenu .nav-collapse.collapse {
+  display: block; }
+
+.form-email {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
+
+/**
+ * Applies Bootstrap's `btn-default` classes to the `btn` class so users don't
+ * have to add two classes to create a default button.
+ */
+.btn {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc; }
+  .btn:hover {
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad; }
+
+/**
+ * There are some cases where elements may be positioned relatively from some
+ * other rule which makes the .sr-only class ineffective. We just put an
+ * !important on it to eliminate that possiblity.
+ */
+.sr-only {
+  position: absolute !important; }
+
+/**
+ * Applies Bootstraps .table class styles to the table element directly.
+ */
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px; }
+  table > thead > tr > th,
+  table > thead > tr > td,
+  table > tbody > tr > th,
+  table > tbody > tr > td,
+  table > tfoot > tr > th,
+  table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #dddddd; }
+  table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dddddd; }
+  table > caption + thead > tr:first-child > th,
+  table > caption + thead > tr:first-child > td,
+  table > colgroup + thead > tr:first-child > th,
+  table > colgroup + thead > tr:first-child > td,
+  table > thead:first-child > tr:first-child > th,
+  table > thead:first-child > tr:first-child > td {
+    border-top: 0; }
+  table > tbody + tbody {
+    border-top: 2px solid #dddddd; }
+  table table {
+    background-color: white; }

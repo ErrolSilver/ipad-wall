@@ -1,0 +1,7 @@
+name = "Bean - No Titles"
+description = "Hides the Title field on selected bean types and sets the value to <none>."
+package = Bean
+dependencies[] = bean
+core = 7.x
+version = "7.x-1.0"
+

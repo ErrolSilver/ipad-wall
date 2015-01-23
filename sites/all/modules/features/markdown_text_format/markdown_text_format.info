@@ -1,0 +1,11 @@
+name = Markdown Text Format
+description = Provides a text formatter for Markdown
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = markdown_text_format
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = markdown
+features[features_api][] = api:2
+features[filter][] = markdown

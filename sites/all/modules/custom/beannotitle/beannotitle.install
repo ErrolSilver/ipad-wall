@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ *   Deletes the selected bean types variable upon module uninstall
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function beannotitle_uninstall() {
+  variable_del('beannotitle_bean_types');
+}

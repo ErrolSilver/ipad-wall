@@ -1,0 +1,54 @@
+<?php
+/**
+ * @file
+ *   Hides the Title field on Bean create/edit pages if the bean type is in the
+ *   `beannotitle_bean_types` variable defined on the admin page.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function beannotitle_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'bean_form') {
+    $selected_bean_types = variable_get('beannotitle_bean_types');
+    if (isset($selected_bean_types[$form['#bundle']])) {
+      if ($selected_bean_types[$form['#bundle']] === $form['#bundle']) {
+        $form['title']['#default_value'] = '<none>';
+        $form['title']['#prefix'] = '<span class="element-hidden">';
+        $form['title']['#suffix'] = '</span><p>' . t('Title field is hidden via the Bean - No Titles module') . '</p>';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_menu().
+ *
+ * Creates the menu callback for the module admin page.
+ */
+function beannotitle_menu() {
+  $items['admin/config/content/beannotitle'] = array(
+    'title' => 'Bean - No Title',
+    'description' => 'Configure which Block Types will automatically have their Title field set to "<none>" and hidden.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('beannotitle_admin'),
+    'access arguments' => array('administer bean no title'),
+    'file' => 'beannotitle.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function beannotitle_permission() {
+  return array(
+    'administer bean no title' => array(
+      'title' => t('Administer Bean No Title'),
+      'description' => t('Configure which bean types will have their title field hidden on the create and edit forms.'),
+    ),
+  );
+}
+

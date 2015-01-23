@@ -1,0 +1,11 @@
+<?php
+function beannorev_form_bean_form_alter(&$form, &$form_state) {
+  // Hide the revision checkbox.
+  $form['revision']['is_new_revision']['#type'] = 'hidden';
+
+  // Make the revision checkbox off by default
+  $form['revision']['is_new_revision']['#default_value'] = 0;
+
+  // Hide the revision log field.
+  $form['revision']['log']['#type'] = 'hidden';
+}

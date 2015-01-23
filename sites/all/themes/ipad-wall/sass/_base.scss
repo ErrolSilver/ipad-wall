@@ -1,0 +1,53 @@
+html, 
+body {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+html {
+  font-size: 1em;
+  // Default (Extra small screens). 1rem = 7px
+  font-size: percentage(7 / 16);
+
+  @media (min-width: 768px) {
+    // Small screens. 1rem = 8px
+    font-size: percentage(8 / 16);
+  }
+  @media (min-width: 992px) {
+    // Medium screens. 1rem = 9px
+    font-size: percentage(9 / 16);
+  }
+  @media (min-width: 1200px) {
+    // Large screens. 1rem = 10px
+    font-size: percentage(10 / 16);
+  }
+}
+
+body {
+  font-size: 1.8em;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}

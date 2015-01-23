@@ -1,0 +1,7 @@
+name = "Bean - No Revisions"
+description = "Disables the revision functionality built into bean."
+package = Bean
+dependencies[] = bean
+core = 7.x
+version = "7.x-1.0"
+

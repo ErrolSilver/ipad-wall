@@ -1,0 +1,13 @@
+name = Image Styles
+description = Defines all non-default image styles
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = image_styles
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = inline_large
+features[image][] = inline_medium_left
+features[image][] = inline_medium_right
+features[image][] = inline_small_left
+features[image][] = inline_small_right

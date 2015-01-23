@@ -1,0 +1,199 @@
+/* line 1, ../sass/_base.scss */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 8, ../sass/_base.scss */
+html {
+  font-size: 1em;
+  font-size: 43.75%;
+}
+@media (min-width: 768px) {
+  /* line 8, ../sass/_base.scss */
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 8, ../sass/_base.scss */
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 8, ../sass/_base.scss */
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* line 27, ../sass/_base.scss */
+body {
+  font-size: 1.8em;
+}
+
+/* line 31, ../sass/_base.scss */
+h1 {
+  font-size: 3.6rem;
+}
+
+/* line 35, ../sass/_base.scss */
+h2 {
+  font-size: 3.2rem;
+}
+
+/* line 39, ../sass/_base.scss */
+h3 {
+  font-size: 3rem;
+}
+
+/* line 43, ../sass/_base.scss */
+h4 {
+  font-size: 2.4rem;
+}
+
+/* line 47, ../sass/_base.scss */
+h5 {
+  font-size: 2rem;
+}
+
+/* line 51, ../sass/_base.scss */
+h6 {
+  font-size: 1.8rem;
+}
+
+/* line 16, ../sass/theme.scss */
+.master-wrapper {
+  height: 400%;
+  width: 500%;
+  will-change: transform;
+}
+
+/* line 23, ../sass/theme.scss */
+.view-all .master-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 35, ../sass/theme.scss */
+section[class^='view-'] {
+  border: 1px solid #000;
+  display: inline-block;
+  float: left;
+  height: 25%;
+  overflow: hidden;
+  -webkit-perspective: 5000px;
+          perspective: 5000px;
+  position: relative;
+  width: 20%;
+}
+/* line 45, ../sass/theme.scss */
+section[class^='view-'] .view--content-container {
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all .75s ease-in-out;
+          transition: all .75s ease-in-out;
+  width: 100%;
+  will-change: transform;
+}
+/* line 53, ../sass/theme.scss */
+section[class^='view-'] .view--content__front {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+/* line 61, ../sass/theme.scss */
+section[class^='view-'] .view--content__front img {
+  height: 100%;
+}
+/* line 66, ../sass/theme.scss */
+section[class^='view-'] .view--content__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #aaa;
+  color: #fff;
+  display: block;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  width: 100%;
+}
+
+/* line 81, ../sass/theme.scss */
+.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* line 85, ../sass/theme.scss */
+.full-screen {
+  background: url("../img/BI.jpg") top left no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+/* line 96, ../sass/theme.scss */
+.full-screen img,
+.full-screen video {
+  width: 100%;
+}
+
+/* line 104, ../sass/theme.scss */
+.modal-backdrop.in {
+  z-index: -1;
+}
+
+/* line 108, ../sass/theme.scss */
+.modal-content {
+  opacity: .9;
+}
+
+/* line 112, ../sass/theme.scss */
+.modal-footer {
+  font-size: 1.5em;
+}
+
+/* line 116, ../sass/theme.scss */
+.ipad-select {
+  height: 500px;
+  width: 100%;
+}
+/* line 120, ../sass/theme.scss */
+.ipad-select .ipad-select--device {
+  float: left;
+  height: 25%;
+  width: 20%;
+}
+/* line 125, ../sass/theme.scss */
+.ipad-select .ipad-select--device .ipad-select--device-chosen {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  display: block;
+  font-size: 2em;
+  height: 100%;
+  padding-top: 33%;
+  text-align: center;
+  width: 100%;
+}
+/* line 136, ../sass/theme.scss */
+.ipad-select .ipad-select--device .ipad-select--device-chosen:hover {
+  background: #f3f3f3;
+  text-decoration: none;
+}
