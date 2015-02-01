@@ -32,7 +32,7 @@ $view-width: 100% / $devices-horizontal;
   }
 }
 
-section[class^='view-'] {
+.screen-view {
   border: 1px solid #000;
   display: inline-block;
   float: left;

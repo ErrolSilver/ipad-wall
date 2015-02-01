@@ -1,0 +1,92 @@
+/**
+ * @file component.scss
+ *   The reusable, modular parts of the design. They are the callouts, the
+ *   sidebar sections, the product lists and so on.
+ */
+/**
+ * Columns
+ */
+.screen-view {
+  border: 1px solid #000;
+  display: inline-block;
+  float: left;
+  height: 25%;
+  overflow: hidden;
+  perspective: 5000px;
+  position: relative;
+  width: 20%; }
+  .screen-view .view--content-container {
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .75s ease-in-out;
+    width: 100%;
+    will-change: transform; }
+  .screen-view .view--content__front {
+    backface-visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%; }
+    .screen-view .view--content__front img {
+      height: 100%; }
+  .screen-view .view--content__back {
+    backface-visibility: hidden;
+    background-color: #aaa;
+    color: #fff;
+    display: block;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    transform: rotateY(180deg);
+    width: 100%; }
+
+.flip {
+  transform: rotateY(180deg); }
+
+.full-screen {
+  background: url("../img/BI.jpg") top left no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
+  .full-screen img,
+  .full-screen video {
+    width: 100%; }
+
+.modal-backdrop.in {
+  z-index: -1; }
+
+.modal-content {
+  opacity: .9; }
+
+.modal-footer {
+  font-size: 1.5em; }
+
+.ipad-select {
+  height: 500px;
+  width: 100%; }
+  .ipad-select .ipad-select--device {
+    float: left;
+    height: 25%;
+    width: 20%; }
+    .ipad-select .ipad-select--device .ipad-select--device-chosen {
+      background: #fff;
+      border: 1px solid #000;
+      color: #000;
+      display: block;
+      font-size: 2em;
+      height: 100%;
+      padding-top: 33%;
+      text-align: center;
+      width: 100%; }
+      .ipad-select .ipad-select--device .ipad-select--device-chosen:hover {
+        background: #f3f3f3;
+        text-decoration: none; }
+
+/*# sourceMappingURL=component.css.map */

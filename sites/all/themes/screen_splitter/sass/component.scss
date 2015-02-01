@@ -1,0 +1,117 @@
+/**
+ * @file component.scss
+ *   The reusable, modular parts of the design. They are the callouts, the
+ *   sidebar sections, the product lists and so on.
+ */
+
+@import "vars";
+@import "mixins";
+
+.screen-view {
+  border: 1px solid #000;
+  display: inline-block;
+  float: left;
+  height: $view-height;
+  overflow: hidden;
+  perspective: 5000px;
+  position: relative;
+  width: $view-width;
+
+  .view--content-container {
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .75s ease-in-out;
+    width: 100%;
+    will-change: transform;
+  }
+
+  .view--content__front {
+    backface-visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .view--content__back {
+    backface-visibility: hidden;
+    background-color: #aaa;
+    color: #fff;
+    display: block;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    transform: rotateY(180deg);
+    width: 100%;
+
+  }
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.full-screen {
+  background: url('../img/BI.jpg') top left no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  img,
+  video {
+    width: 100%;
+  }
+}
+
+
+// Modal tweaks
+.modal-backdrop.in {
+  z-index: -1;
+}
+
+.modal-content {
+  opacity: .9;
+}
+
+.modal-footer {
+  font-size: 1.5em;
+}
+
+.ipad-select {
+  height: 500px;
+  width: 100%;
+
+  .ipad-select--device {
+    float: left;
+    height: $view-height;
+    width: $view-width;
+
+    .ipad-select--device-chosen {
+      background: #fff;
+      border: 1px solid #000;
+      color: #000;
+      display: block;
+      font-size: 2em;
+      height: 100%;
+      padding-top: 33%;
+      text-align: center;
+      width: 100%;
+
+      &:hover {
+        background: #f3f3f3;
+        text-decoration: none;
+      }
+    }
+  }
+}
