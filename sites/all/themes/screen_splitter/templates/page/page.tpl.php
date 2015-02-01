@@ -76,6 +76,8 @@
  */
 ?>
 <main class="master-wrapper">
+  <?php print render($page['multi_screen']); ?>
+  <!--
   <section id="view1" class="screen-view">
     <div class="view--content-container">
       <div class="view--content__front">
@@ -86,217 +88,11 @@
       </div>
     </div>
   </section>
-
-  <section id="view2" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view3" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view4" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view5" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view6" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view7" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view8" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view9" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view10" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view11" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view12" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view13" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view14" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view15" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view16" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view17" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view18" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view19" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
-
-  <section id="view20" class="screen-view">
-    <div class="view--content-container">
-      <div class="view--content__front">
-        <img src="http://lorempixel.com/768/1024/city/">
-      </div>
-      <div class="view--content__back">
-        back
-      </div>
-    </div>
-  </section>
+  -->
 
   <section id="fullScreen" class="full-screen">
+  <?php print render($page['full_screen']); ?>
+
     <!-- Modal -->
     <div class="modal" id="config" tabindex="-1" role="dialog" aria-labelledby="configLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -375,9 +171,9 @@
                 <input type="checkbox" id="fullscreenCheck" value="fullscreen"> Fullscreen?
               </label>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div> <!-- /modal-footer -->
+        </div> <!-- /modal-content -->
+      </div> <!-- /modal-dialog -->
+    </div> <!-- /modal -->
   </section>
 </main>

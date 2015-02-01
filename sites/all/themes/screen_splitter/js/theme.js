@@ -82,12 +82,17 @@
   /**
    * Stuff to run on page load and ajax events.
    */
-  Drupal.behaviors.bootstrapStarter = {
+  Drupal.behaviors.screenSplitter = {
     attach: function (context, settings) {
       svgToPng();
       // Place functions to run here.
-
-      $modal.modal('show'); 
+      $('.screen-view').each(function(i, el) {
+        i++
+        $(this).attr('id', 'view'+i);
+      });
+      if(!$body.hasClass('logged-in')) {
+        $modal.modal('show'); 
+      }
       $body.addClass('view-all');
     }
   };

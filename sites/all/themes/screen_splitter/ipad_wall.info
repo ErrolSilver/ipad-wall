@@ -10,7 +10,7 @@ core = 7.x
 
 regions[full_screen]     = 'Full Screen'
 regions[multi_screen]    = 'Multi Screens'
-regions[content]         = 'content' 
+regions[administration]  = 'Administration'
 
 
 ;;;;;;;;;;;;;;;;;;;;;

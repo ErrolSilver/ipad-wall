@@ -29,7 +29,8 @@
     text-align: center;
     width: 100%; }
     .screen-view .view--content__front img {
-      height: 100%; }
+      height: 100%;
+      width: auto; }
   .screen-view .view--content__back {
     backface-visibility: hidden;
     background-color: #aaa;
@@ -46,17 +47,16 @@
   transform: rotateY(180deg); }
 
 .full-screen {
-  background: url("../img/BI.jpg") top left no-repeat;
-  background-size: cover;
   height: 100%;
   left: 0;
   opacity: 1;
-  position: relative;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1; }
   .full-screen img,
   .full-screen video {
+    height: auto;
     width: 100%; }
 
 .modal-backdrop.in {

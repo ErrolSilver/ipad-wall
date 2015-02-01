@@ -35,6 +35,7 @@
 
     img {
       height: 100%;
+      width: auto;
     }
   }
 
@@ -58,18 +59,17 @@
 }
 
 .full-screen {
-  background: url('../img/BI.jpg') top left no-repeat;
-  background-size: cover;
   height: 100%;
   left: 0;
   opacity: 1;
-  position: relative;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1;
 
   img,
   video {
+    height: auto;
     width: 100%;
   }
 }

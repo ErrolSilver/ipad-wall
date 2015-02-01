@@ -15,11 +15,11 @@ drupal_add_js(drupal_get_path('theme', 'bootstrap_starter') . '../../screen_spli
 /**
  * Implements hook_preprocess_page().
  */
-function bootstrap_starter_preprocess_page(&$variables) {
+function screen_splitter_preprocess_page(&$variables) {
   // Create the logo image tag here to keep page.tpl clean. We use JS in
   // theme.js to swap out the svg for a png for old browsers.
   $logo_variables = array(
-    'path' => base_path() . drupal_get_path('theme', 'bootstrap_starter') . '/images/logo.svg',
+    'path' => base_path() . drupal_get_path('theme', 'screen_splitter') . '/images/logo.svg',
     'alt' => 'Axia Logo',
     'attributes' => array(
       'width' => 100, // Update when you create your custom logo
@@ -34,9 +34,9 @@ function bootstrap_starter_preprocess_page(&$variables) {
 /**
  * Overrides theme_field()
  * Remove the hard coded classes so we can add them in preprocess functions.
- * See bootstrap_starter_preprocess_field().
+ * See screen_splitter_preprocess_field().
  */
-function bootstrap_starter_field($variables) {
+function screen_splitter_field($variables) {
   $output = '';
 
   // Render the label, if it's not hidden.
@@ -62,7 +62,7 @@ function bootstrap_starter_field($variables) {
  *
  * Allows us to easily add classes to individual fields and their wrappers.
  */
-function bootstrap_starter_preprocess_field(&$variables) {
+function screen_splitter_preprocess_field(&$variables) {
   $name = $variables['element']['#field_name'];
   $bundle = $variables['element']['#bundle'];
   $mode = $variables['element']['#view_mode'];
@@ -108,3 +108,10 @@ function bootstrap_starter_preprocess_field(&$variables) {
   }
 }
 
+/*
+function screen_splitter_preprocess_region(&$variables, $hook) {
+    if($variables['region'] == "multi_screen"){
+        $variables['classes_array'][] = 'master-wrapper';
+    }
+}
+*/
