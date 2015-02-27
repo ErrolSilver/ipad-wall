@@ -20,9 +20,9 @@ $setupSelect.click(function() {
   }
 
   if($(window).width() < 992) {
-    /*var el = document.documentElement, 
+    var el = document.documentElement, 
       rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen;
-    rfs.call(el);*/
+    rfs.call(el);
   }
 });
 
