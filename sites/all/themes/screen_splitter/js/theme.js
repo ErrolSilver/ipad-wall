@@ -1,101 +1,72 @@
-(function ($) {
+var $body = $('body'),
+  $modal = $('#config'),
+  $modalClose = $('#config').find('.close'),
+  $modalConfirm = $('#config').find('.confirm'),
+  $fullScreenLayer = $('#fullScreen'),
+  $setupSelect = $('#config').find('.ipad-select--device-chosen'),
+  $modalCheckbox = $('#fullscreenCheck'),
+  $viewContent = $('.view--content-container');
 
-  var $body = $('body'),
-    $modal = $('#config'),
-    $modalClose = $('#config').find('.close'),
-    $modalConfirm = $('#config').find('.confirm'),
-    $fullScreenLayer = $('#fullScreen'),
-    $setupSelect = $('#config').find('.ipad-select--device-chosen'),
-    $modalCheckbox = $('#fullscreenCheck'),
-    $viewContent = $('.view--content-container');
+ FastClick.attach(document.body);
 
-  $setupSelect.click(function() {
-    $modal.modal('hide');
-    $body.addClass('animated');
-    $body.removeClass('view-all');
 
-    if(!$modalCheckbox.is(":checked")) {
-      $fullScreenLayer.addClass('hidden');
-    }
+$modal.modal('show'); 
+$body.addClass('view-all');
 
-    if($(window).width() < 992) {
-      /*var el = document.documentElement, 
-        rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen;
-      rfs.call(el);*/
-    }
-  });
+$setupSelect.click(function() {
+  var hash = location.hash;
 
-  $modalClose.click(function() {
-    $body.removeClass('view-all');
+  $modal.modal('hide');
+  $body.removeClass('view-all');
+
+  if(!$modalCheckbox.is(":checked")) {
     $fullScreenLayer.addClass('hidden');
-  });
-
-
-
-  $viewContent.swipe({
-    pinchOut:function(event, direction, distance, duration, fingerCount, pinchZoom) {
-      $body.addClass('view-all');
-    },
-    pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom) {
-      $body.removeClass('view-all');
-    },
-    tap:function() {
-      $(this).toggleClass('flip');
-    },
-    fingers:2,  
-    pinchThreshold:0  
-  });
-
-  $fullScreenLayer.swipe({
-    pinchOut:function(event, direction, distance, duration, fingerCount, pinchZoom) {
-      $body.addClass('view-all');
-    },
-    pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom) {
-      $body.removeClass('view-all');
-    },
-    fingers:2,  
-    pinchThreshold:0  
-  });
-
-
-  /**
-   * Swap out svg files for PNGs on unsupporting devices. Modrnizr determines
-   * what an unsupporting device is by adding the .no-svg class to the html
-   * tag.
-   */
-  function svgToPng() {
-    $('.no-svg .js__svg-image').each(function() {
-      var src = $(this).attr('src');
-      src = src.replace("svg", "png");
-      $(this).attr('src', src);
-    });
   }
+});
 
-  /**
-   * Stuff to run on resize.
-   */
-  $(window).resize(function() {
-    var width = $(window).width();
-    // Place functions to run here.
-  });
+$modalClose.click(function() {
+  $body.removeClass('view-all');
+  $fullScreenLayer.addClass('hidden');
+});
 
-  /**
-   * Stuff to run on page load and ajax events.
-   */
-  Drupal.behaviors.screenSplitter = {
-    attach: function (context, settings) {
-      svgToPng();
-      // Place functions to run here.
-      $('.screen-view').each(function(i, el) {
-        i++
-        $(this).attr('id', 'view'+i);
-      });
-      if(!$body.hasClass('logged-in')) {
-        $modal.modal('show'); 
-      }
-      $body.addClass('view-all');
-    }
-  };
 
-}(jQuery));
 
+$viewContent.click(function() {
+  $(this).addClass('flip');
+});
+
+
+$fullScreenLayer.swipe({
+  pinchOut:function(event, direction, distance, duration, fingerCount, pinchZoom) {
+    $body.addClass('view-all');
+  },
+  pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom) {
+    $body.removeClass('view-all');
+  },
+  fingers:2,  
+  pinchThreshold:0  
+});
+
+var swiper = new Swiper('.swiper-container');
+
+$('.swiper-slide').last().addClass('last-slide');
+
+
+
+var tapped=false;
+$('.last-slide').on("touchstart",function() {
+  if(!tapped) { 
+    tapped=setTimeout(function() {
+      tapped = null;
+    }, 300);   
+  } else {  
+    clearTimeout(tapped);
+    tapped = null;
+    $('.swiper-slide').removeClass('swiper-slide-prev').removeClass('swiper-slide-active');
+    $('.swiper-slide').first().addClass('swiper-slide-active');
+    $viewContent.removeClass('flip');
+    setTimeout(function() {
+      $('.swiper-wrapper').attr('style', '');
+    }, 500);
+  }
+});

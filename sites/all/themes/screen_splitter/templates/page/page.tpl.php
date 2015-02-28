@@ -77,18 +77,19 @@
 ?>
 <main class="master-wrapper">
   <?php print render($page['multi_screen']); ?>
-  <!--
-  <section id="view1" class="screen-view">
+  
+  <section class="screen-view">
     <div class="view--content-container">
       <div class="view--content__front">
         <img src="http://lorempixel.com/768/1024/city/">
       </div>
       <div class="view--content__back">
-        back
+        <h1>Getting server updates</h1>
+
       </div>
     </div>
   </section>
-  -->
+  
 
   <section id="fullScreen" class="full-screen">
   <?php print render($page['full_screen']); ?>

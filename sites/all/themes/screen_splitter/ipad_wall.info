@@ -17,19 +17,16 @@ regions[administration]  = 'Administration'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/bootstrap.css
-stylesheets[all][] = css/base.css
-stylesheets[all][] = css/layout.css
-stylesheets[all][] = css/component.css
-stylesheets[all][] = css/state.css
 stylesheets[all][] = css/theme.css
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 
-scripts[] = 'js/plugins/respond.min.js'
-scripts[] = 'js/plugins/modernizr.custom.js'
-scripts[] = 'js/plugins/jquery.touchSwipe.min.js'
 scripts[] = 'js/plugins/bootstrap.js'
-
+scripts[] = 'js/plugins/fastclick.js'
+scripts[] = 'js/plugins/html5.js'
+scripts[] = 'js/plugins/jquery.touchSwipe.min.js'
+scripts[] = 'js/plugins/modernizr.custom.js'
+scripts[] = 'js/plugins/respond.min.js'
+scripts[] = 'js/plugins/swiper.min.js'
