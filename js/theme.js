@@ -7,6 +7,8 @@ var $body = $('body'),
   $modalCheckbox = $('#fullscreenCheck'),
   $viewContent = $('.view--content-container');
 
+ FastClick.attach(document.body);
+
 
 $modal.modal('show'); 
 $body.addClass('view-all');
@@ -22,14 +24,14 @@ $setupSelect.click(function() {
   }
 });
 
-$modalClose.mousedown(function() {
+$modalClose.click(function() {
   $body.removeClass('view-all');
   $fullScreenLayer.addClass('hidden');
 });
 
 
 
-$viewContent.mousedown(function() {
+$viewContent.click(function() {
   $(this).addClass('flip');
 });
 

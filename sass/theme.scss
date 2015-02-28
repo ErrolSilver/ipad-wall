@@ -10,10 +10,8 @@ $display-width: $devices-horizontal * 100%;
 $view-height: 100% / $devices-vertical;
 $view-width: 100% / $devices-horizontal;
 
-// general boring rules
 @import 'bootstrap';
 @import 'base';
-
 @import 'swiper';
 
 .master-wrapper {
@@ -29,12 +27,6 @@ $view-width: 100% / $devices-horizontal;
   }
 }
 
-.animated {
-  .master-wrapper {
-    //transition: all .5s linear;
-  }
-}
-
 section[class^='view-'] {
   border: 1px solid #000;
   display: inline-block;
@@ -46,10 +38,9 @@ section[class^='view-'] {
   width: $view-width;
 
   .view--content-container {
-    transform: translate3d(0, 0, 0);
-
     height: 100%;
     transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
     transition: all .75s ease-in-out;
     width: 100%;
     will-change: transform;
