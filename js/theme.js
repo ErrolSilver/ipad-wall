@@ -20,9 +20,9 @@ $setupSelect.click(function() {
   }
 
   if($(window).width() < 992) {
-    var el = document.documentElement, 
+    /*var el = document.documentElement, 
       rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen;
-    rfs.call(el);
+    rfs.call(el);*/
   }
 });
 
@@ -33,6 +33,14 @@ $modalClose.click(function() {
 
 
 
+$viewContent.click(function(event) {
+  /* Act on the event */
+  $(this).addClass('flip');
+});
+
+/*
+This breaks overflow scrolling. boo. 
+
 $viewContent.swipe({
   pinchOut:function(event, direction, distance, duration, fingerCount, pinchZoom) {
     $body.addClass('view-all');
@@ -41,11 +49,11 @@ $viewContent.swipe({
     $body.removeClass('view-all');
   },
   tap:function() {
-    $(this).toggleClass('flip');
+    $(this).addClass('flip');
   },
   fingers:2,  
   pinchThreshold:0  
-});
+});*/
 
 $fullScreenLayer.swipe({
   pinchOut:function(event, direction, distance, duration, fingerCount, pinchZoom) {
@@ -53,6 +61,24 @@ $fullScreenLayer.swipe({
   },
   pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom) {
     $body.removeClass('view-all');
+  },
+  fingers:2,  
+  pinchThreshold:0  
+});
+
+var swiper = new Swiper('.swiper-container');
+
+$('.swiper-slide').last().addClass('last-slide');
+
+$('.last-slide').swipe({
+  tap:function() {
+    $('.swiper-slide').removeClass('swiper-slide-prev').removeClass('swiper-slide-active');
+    $('.swiper-slide').first().addClass('swiper-slide-active');
+    $viewContent.removeClass('flip');
+    setTimeout(function() {
+      $('.swiper-wrapper').attr('style', '');
+    }, 500);
+
   },
   fingers:2,  
   pinchThreshold:0  

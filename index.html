@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="mobile-web-app-capable" content="yes">
 
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -20,7 +21,17 @@
         <img src="http://lorempixel.com/768/1024/city/">
       </div>
       <div class="view--content__back">
-        back
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-image-container">
+                <img src="http://placehold.it/768x3000">
+              </div>
+            </div>
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -327,8 +338,8 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="js/jquery.touchSwipe.min.js"></script>
-  <script src="//cdn.jsdelivr.net/velocity/1.2.1/velocity.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  <script src="js/swiper.min.js"></script>
   <script src="js/theme.js"></script>
 
 </body>

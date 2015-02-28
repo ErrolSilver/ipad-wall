@@ -13,6 +13,9 @@ $view-width: 100% / $devices-horizontal;
 // general boring rules
 @import 'base';
 
+// Swiper styles
+@import 'swiper';
+
 .master-wrapper {
   height: $display-height;
   width: $display-width; 
@@ -43,6 +46,8 @@ section[class^='view-'] {
   width: $view-width;
 
   .view--content-container {
+    transform: translate3d(0, 0, 0);
+
     height: 100%;
     transform-style: preserve-3d;
     transition: all .75s ease-in-out;
@@ -69,17 +74,41 @@ section[class^='view-'] {
     color: #fff;
     display: block;
     height: 100%;
-    padding: 10px;
     position: absolute;
     text-align: center;
     transform: rotateY(180deg);
     width: 100%;
 
+    .swiper-container {
+      height: 100%;
+      width: 768px;
+    }
+
+    .swiper-slide {
+      align-items: center;
+      background: red;
+      display: flex;
+      font-size: 18px;
+      justify-content: center;
+      text-align: center;
+
+      .swiper-slide-image-container {
+        display: block;
+        height: 100%;
+        overflow: scroll;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
 .flip {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg)!important;
 }
 
 .full-screen {
