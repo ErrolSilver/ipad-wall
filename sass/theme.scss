@@ -10,8 +10,9 @@ $display-width: $devices-horizontal * 100%;
 $view-height: 100% / $devices-vertical;
 $view-width: 100% / $devices-horizontal;
 
-// general boring rules
+@import 'bootstrap';
 @import 'base';
+@import 'swiper';
 
 .master-wrapper {
   height: $display-height;
@@ -26,13 +27,7 @@ $view-width: 100% / $devices-horizontal;
   }
 }
 
-.animated {
-  .master-wrapper {
-    //transition: all .5s linear;
-  }
-}
-
-.screen-view {
+section[class^='view-'] {
   border: 1px solid #000;
   display: inline-block;
   float: left;
@@ -45,6 +40,7 @@ $view-width: 100% / $devices-horizontal;
   .view--content-container {
     height: 100%;
     transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
     transition: all .75s ease-in-out;
     width: 100%;
     will-change: transform;
@@ -52,6 +48,7 @@ $view-width: 100% / $devices-horizontal;
 
   .view--content__front {
     backface-visibility: hidden;
+    display: flex;
     height: 100%;
     overflow: hidden;
     position: absolute;
@@ -59,7 +56,9 @@ $view-width: 100% / $devices-horizontal;
     width: 100%;
 
     img {
-      height: 100%;
+      height: auto;
+      margin: auto;
+      width: 100%;
     }
   }
 
@@ -69,17 +68,41 @@ $view-width: 100% / $devices-horizontal;
     color: #fff;
     display: block;
     height: 100%;
-    padding: 10px;
     position: absolute;
     text-align: center;
     transform: rotateY(180deg);
     width: 100%;
 
+    .swiper-container {
+      height: 100%;
+      width: 768px;
+    }
+
+    .swiper-slide {
+      align-items: center;
+      background: #ed2024;
+      display: flex;
+      font-size: 18px;
+      justify-content: center;
+      text-align: center;
+
+      .swiper-slide-image-container {
+        display: block;
+        height: 100%;
+        overflow: scroll;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
 .flip {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg)!important;
 }
 
 .full-screen {
