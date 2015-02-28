@@ -11,9 +11,9 @@ $view-height: 100% / $devices-vertical;
 $view-width: 100% / $devices-horizontal;
 
 // general boring rules
+@import 'bootstrap';
 @import 'base';
 
-// Swiper styles
 @import 'swiper';
 
 .master-wrapper {
@@ -57,6 +57,7 @@ section[class^='view-'] {
 
   .view--content__front {
     backface-visibility: hidden;
+    display: flex;
     height: 100%;
     overflow: hidden;
     position: absolute;
@@ -64,7 +65,9 @@ section[class^='view-'] {
     width: 100%;
 
     img {
-      height: 100%;
+      height: auto;
+      margin: auto;
+      width: 100%;
     }
   }
 
@@ -86,7 +89,7 @@ section[class^='view-'] {
 
     .swiper-slide {
       align-items: center;
-      background: red;
+      background: #ed2024;
       display: flex;
       font-size: 18px;
       justify-content: center;
